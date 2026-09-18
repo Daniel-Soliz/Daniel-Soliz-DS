@@ -14,14 +14,10 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 const header = document.querySelector('.header');
-const progress = document.querySelector('.scroll-progress span');
 const navLinks = [...document.querySelectorAll('.nav a[href^="#"]')];
 const sections = [...document.querySelectorAll('main section[id]')];
 
 function updateScrollUI() {
-  const max = document.documentElement.scrollHeight - window.innerHeight;
-  const ratio = max > 0 ? window.scrollY / max : 0;
-  if (progress) progress.style.transform = `scaleX(${Math.min(1, Math.max(0, ratio))})`;
   if (header) header.classList.toggle('scrolled', window.scrollY > 24);
 
   let current = '';
