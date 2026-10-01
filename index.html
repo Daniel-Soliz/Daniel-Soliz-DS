@@ -22,6 +22,7 @@
       <span class="brand-mark">DS</span>
       <span class="brand-name">Daniel Soliz</span>
     </a>
+    <nav class="nav" aria-label="Navegação principal"><a href="#projetos">Projetos</a><a href="#servicos">Serviços</a><a href="#contato">Contato</a></nav>
   </header>
 
   <main>
@@ -72,72 +73,96 @@
       </div>
     </section>
 
-    <section class="section projects" id="projetos">
+    <section class="section projects" id="projetos" aria-labelledby="projects-title">
       <div class="section-heading">
-        <span class="kicker">02 • Projetos</span>
-        <h2>Trabalhos que já saíram do papel.</h2>
+        <span class="kicker">02 • Portfólio selecionado</span>
+        <div><h2 id="projects-title">Ideias diferentes.<br><span>Soluções bem construídas.</span></h2>
+        <p class="projects-intro">Conheça meus projetos de sites, sistemas e jogos. Explore por categoria e veja cada experiência de perto.</p></div>
       </div>
-
-      <article class="project-card featured">
-        <div class="project-visual">
-          <div class="browser">
-            <div class="browser-bar">
-              <span></span><span></span><span></span>
-              <div class="browser-url">Studio Black7</div>
-            </div>
-            <div class="browser-body">
-              <span class="project-badge">Projeto em destaque</span>
-              <div class="sb7">BLACK<span>7</span></div>
-              <p>Barbearia • Loja • Gestão</p>
-            </div>
-          </div>
+      <div class="project-toolbar">
+        <div class="project-filters" role="group" aria-label="Filtrar projetos por categoria" hidden>
+          <button type="button" class="filter-button active" data-filter="todos" aria-pressed="true">Todos <span>4</span></button>
+          <button type="button" class="filter-button" data-filter="sites" aria-pressed="false">Sites <span>1</span></button>
+          <button type="button" class="filter-button" data-filter="sistemas" aria-pressed="false">Sistemas <span>1</span></button>
+          <button type="button" class="filter-button" data-filter="jogos" aria-pressed="false">Jogos <span>2</span></button>
         </div>
-        <div class="project-info">
-          <span class="project-number">Projeto 01</span>
-          <h3>Studio Black7</h3>
-          <p>Site completo para barbearia com loja virtual, catálogo de produtos, carrinho, checkout, painel administrativo, gestão de serviços, fotos, estoque e pedidos.</p>
-          <div class="tags">
-            <span>React</span><span>TypeScript</span><span>Supabase</span><span>Loja virtual</span><span>Painel Admin</span><span>Pix em teste</span>
-          </div>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="https://daniel-soliz.github.io/Studioblack7/" target="_blank" rel="noopener noreferrer">Abrir projeto</a>
-            <a class="text-link" href="https://github.com/Daniel-Soliz/Studioblack7" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card project-card-secondary">
-        <div class="project-visual squirm-visual">
-          <div class="browser">
-            <div class="browser-bar">
-              <span></span><span></span><span></span>
-              <div class="browser-url">SQUIRM.IO</div>
-            </div>
-            <div class="browser-body squirm-body">
-              <span class="project-badge squirm-badge">Jogo Web</span>
-              <div class="squirm-logo">SQUIRM<span>.IO</span></div>
-              <p>Arcade • Customização • Gameplay</p>
-            </div>
-          </div>
-        </div>
-        <div class="project-info">
-          <span class="project-number">Projeto 02</span>
-          <h3>SQUIRM.IO</h3>
-          <p>Jogo web em React com modos de jogo, personalização visual do personagem e interface interativa. Um projeto que mostra outra parte do meu trabalho além de sites comerciais.</p>
-          <div class="tags">
-            <span>React</span><span>TypeScript</span><span>Vite</span><span>Game UI</span><span>Customização</span><span>Web App</span>
-          </div>
-          <div class="project-actions">
-            <a class="btn btn-primary" href="https://daniel-soliz.github.io/SQUIRM.IO/" target="_blank" rel="noopener noreferrer">Abrir projeto</a>
-            <a class="text-link" href="https://github.com/Daniel-Soliz/SQUIRM.IO" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a>
-          </div>
-        </div>
-      </article>
-
-      <div class="coming">
-        <span>Mais projetos em breve</span>
-        <p>O portfólio vai crescer conforme novos trabalhos forem concluídos.</p>
+        <p class="project-count" role="status" aria-live="polite">4 projetos para explorar</p>
       </div>
+      <div class="project-grid">
+        <article class="project-card portfolio-card" data-category="sites" aria-labelledby="project-01">
+          <div class="project-visual visual-studio" aria-hidden="true">
+            <div class="browser">
+              <div class="browser-bar"><span></span><span></span><span></span><div class="browser-url">Studio Black7</div></div>
+              <div class="browser-body"><span class="project-badge">Site & loja virtual</span><div class="portfolio-logo">BLACK<span>7</span></div><p>Barbearia • Catálogo • Gestão</p></div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-caption"><span class="project-number">Site & loja virtual</span><span class="project-index">/01</span></div>
+            <h3 id="project-01">Studio Black7</h3>
+            <p>Presença digital para uma barbearia, reunindo serviços, catálogo de produtos e painel de gestão em uma experiência organizada.</p>
+            <div class="tags"><span>React</span><span>TypeScript</span><span>Loja virtual</span></div>
+            <div class="project-actions">
+              <a class="btn btn-primary" href="https://daniel-soliz.github.io/Studioblack7/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Studio Black7 em uma nova aba">Conhecer projeto ↗</a>
+              <a class="text-link" href="https://github.com/Daniel-Soliz/Studioblack7" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Studio Black7 no GitHub">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card portfolio-card" data-category="sistemas" aria-labelledby="project-02">
+          <div class="project-visual visual-crm" aria-hidden="true">
+            <div class="browser">
+              <div class="browser-bar"><span></span><span></span><span></span><div class="browser-url">Truinexa Digital</div></div>
+              <div class="browser-body"><span class="project-badge">CRM comercial</span><div class="portfolio-logo">TRUINEXA<span> DIGITAL</span></div><p>Oportunidades • Carteira • Funil</p></div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-caption"><span class="project-number">CRM comercial</span><span class="project-index">/02</span></div>
+            <h3 id="project-02">Truinexa Digital</h3>
+            <p>Sistema para organizar oportunidades, carteira de clientes e etapas de atendimento. Uma visão centralizada para acompanhar a rotina comercial.</p>
+            <div class="tags"><span>React</span><span>TypeScript</span><span>CRM</span></div>
+            <div class="project-actions">
+              <a class="btn btn-primary" href="https://daniel-soliz.github.io/TRIUNEXA-DIGITAL/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Truinexa Digital em uma nova aba">Conhecer projeto ↗</a>
+              <a class="text-link" href="https://github.com/Daniel-Soliz/TRIUNEXA-DIGITAL" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Truinexa Digital no GitHub">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card portfolio-card" data-category="jogos" aria-labelledby="project-03">
+          <div class="project-visual visual-impacto" aria-hidden="true">
+            <div class="browser">
+              <div class="browser-bar"><span></span><span></span><span></span><div class="browser-url">Impacto Rebelde</div></div>
+              <div class="browser-body"><span class="project-badge">Jogo de ação para computador</span><div class="portfolio-logo">IMPACTO<span> REBELDE</span></div><p>9 missões • Ação • Campanha solo</p></div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-caption"><span class="project-number">Jogo de ação para computador</span><span class="project-index">/03</span></div>
+            <h3 id="project-03">Impacto Rebelde</h3>
+            <p>Jogo de ação lateral com nove missões, chefões e cenários diferentes. Uma campanha original com progressão, checkpoints e resgate de civis.</p>
+            <div class="tags"><span>JavaScript</span><span>Canvas</span><span>Pixel art</span></div>
+            <div class="project-actions">
+              <a class="btn btn-primary" href="https://daniel-soliz.github.io/Impacto-Rebelde/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Impacto Rebelde em uma nova aba">Jogar agora ↗</a>
+              <a class="text-link" href="https://github.com/Daniel-Soliz/Impacto-Rebelde" target="_blank" rel="noopener noreferrer" aria-label="Ver código de Impacto Rebelde no GitHub">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card portfolio-card" data-category="jogos" aria-labelledby="project-04">
+          <div class="project-visual visual-squirm" aria-hidden="true">
+            <div class="browser">
+              <div class="browser-bar"><span></span><span></span><span></span><div class="browser-url">SQUIRM.IO</div></div>
+              <div class="browser-body"><span class="project-badge">Jogo web</span><div class="portfolio-logo">SQUIRM<span>.IO</span></div><p>Arcade • Customização • Web</p></div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-caption"><span class="project-number">Jogo web</span><span class="project-index">/04</span></div>
+            <h3 id="project-04">SQUIRM.IO</h3>
+            <p>Experiência arcade no navegador com modos de jogo e personalização do personagem. Interface interativa voltada à diversão.</p>
+            <div class="tags"><span>React</span><span>TypeScript</span><span>Vite</span></div>
+            <div class="project-actions">
+              <a class="btn btn-primary" href="https://daniel-soliz.github.io/SQUIRM.IO/" target="_blank" rel="noopener noreferrer" aria-label="Abrir SQUIRM.IO em uma nova aba">Jogar agora ↗</a>
+              <a class="text-link" href="https://github.com/Daniel-Soliz/SQUIRM.IO" target="_blank" rel="noopener noreferrer" aria-label="Ver código de SQUIRM.IO no GitHub">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="portfolio-footer"><p>Tem um projeto parecido em mente?</p><a class="text-link" href="#contato">Vamos conversar sobre sua ideia ↗</a></div>
     </section>
 
     <section class="section" id="servicos">
